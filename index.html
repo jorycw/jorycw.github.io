@@ -1,1 +1,63 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Jory Williams</title>
+    <link href="https://fonts.googleapis.com/css?family=Overpass+Mono|Poppins" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="tabs.js"></script>
+    <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <meta charset="utf-8">
+    <meta name="Description" content="Jory Williams">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=no"/>
+    <meta name="theme-color" content="#22222A"/>
+</head>
+<body>
+    <div class="menu">
+
+        <div class="tabbox">
+            <div class="tabs">
+                <button class="tab active" onclick="openTab(event, 'me')">
+                    <div class="tab-name">me</div>
+                </button>
+                <button class="tab" onclick="openTab(event, 'resume')">
+                    <div class="tab-name">resume</div>
+                </button>
+                <button class="tab" onclick="openTab(event, 'projects')">
+                    <div class="tab-name">projects</div>
+                </button>
+                <button class="tab" onclick="openTab(event, 'contact-me')">
+                    <div class="tab-name">contact me</div>
+                </button>
+
+            </div>
+        </div>
+
+    <div class="intro">
+        <h3>Jory Williams.&nbsp;&nbsp;<span>Computer Science Student.&nbsp;&nbsp;&nbsp;&nbsp;</span></h3>
+        </div>
+    </div>
+
+    <div class="about tabcontent" id="me">
+        <h2>Me</h2>
+        <p><b>BLah</b> blah blabh</p>
+        <p><b>blahblahblah</b></p>
+     </div>
+    <div class="about tabcontent" id="resume">
+        <h2>Resume</h2>
+        <p><b>BLah</b> blah blabh</p>
+        <p><b>blahblahblah</b></p>
+    </div>
+
+    <div class="about tabcontent" id="projects">
+        <h2>projects</h2>
+    </div>
+
+    <div class="about tabcontent" id="contact-me">
+        <h2>contact me </h2>
+    </div>
+
+</body>
+</html>

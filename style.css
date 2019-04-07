@@ -37,9 +37,9 @@ p {
 
 .intro {
     height: auto;
-    #transform: rotate(-90deg);
-    #position: relative;
-    #top: 140px;
+    /*#transform: rotate(-90deg);*/
+    /*#position: relative;*/
+    /*#top: 140px;*/
     float: right;
 }
 
@@ -94,7 +94,6 @@ p {
 .tab:before, .tab:after {
     border: none;
     border-top: 1px solid #22222A;
-    border-radius: 3px 3px 0 0;
     display: block;
     content: "";
     width: 100px;
@@ -107,12 +106,14 @@ p {
     right: -34px;
     transform: skewX(23deg);
     border-right: 1px solid #22222A;
+    border-radius: 0 3px 0 0;
 }
 
 .tab:before {
     left: -34px;
     transform: skewX(-23deg);
     border-left: 1px solid #22222A;
+    border-radius: 3px 0 0 0;
 }
 
 
@@ -132,13 +133,11 @@ p {
     background: #626275;
     z-index: -1;
 }
-
 .active.tab {
     color: #ffffff;
     background: #22222A;
     z-index: 1;
 }
-
 .active.tab:after, .active.tab:before {
     color: #ffffff;
     background: #22222A;
@@ -184,4 +183,34 @@ p {
     50% { border-color: #ffffff; }
 }
 
+
+@media (max-width: 1680px) {
+    .tab {
+        margin-right: 59.5px;
+        height: 44.75px;
+        width: 131.25px;
+    }
+    .tab:before, .tab:after {
+        width: 107.5px;
+        height: 44.75px;
+    }
+    .tab:before {
+        left: -29.75px;
+    }
+    .tab:after {
+        right: -29.75px;
+    }
+    .tabbox {
+        left: 131.25px;
+    }
+    .tab-name {
+        left: -18.375px;
+    }
+    .menu {
+        height: 61.25px;
+    }
+    .intro h3 {
+        line-height: 61.25px;
+    }
+}
 

@@ -63,15 +63,6 @@ p {
     margin-bottom: 20px;
 }
 
-
-@media (max-width: 980px) {
-
-}
-
-@media (max-width: 640px) {
-
-}
-
 *::selection {
     background: #141419;
 }
@@ -242,6 +233,36 @@ p {
     }
     .intro h3 {
         line-height: 53px;
+    }
+}
+
+@media (max-width: 1350px) { /*1280p*/
+    .tab {
+        margin-right: 45px;
+        height: 34px;
+        width: 100px;
+    }
+    .tab:before, .tab:after {
+        width: 67px;
+        height: 33px;
+    }
+    .tab:before {
+        left: -23px;
+    }
+    .tab:after {
+        right: -26px;
+    }
+    .tabbox {
+        left: 50px;
+    }
+    .tab-name {
+        left: -14px;
+    }
+    .menu {
+        height: 47px;
+    }
+    .intro h3 {
+        line-height: 47px;
     }
 }
 

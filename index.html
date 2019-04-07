@@ -22,7 +22,7 @@
             <button class="tab active" onclick="openTab(event, 'me')">
                 <div class="tab-name">me</div>
             </button>
-            <button class="tab" onclick="openTab(event, 'resume')">
+            <button class="tab" onclick="window.open('jorywilliams.com/resume')">
                 <div class="tab-name">resume</div>
             </button>
             <button class="tab" onclick="openTab(event, 'projects')">
@@ -43,29 +43,48 @@
     </div>
 
     <div class="about tabcontent" id="me">
-        <h2>Me</h2>
-        <p><b>BLah</b> blah blabh</p>
-        <p><b>blahblahblah</b></p>
-     </div>
+        <div class="spacing">
+            <h2>Me</h2>
+            <p><b>BLah</b> blah blabh</p>
+        </div>
+    </div>
     <div class="about tabcontent" id="resume">
-        <h2>Resume</h2>
-        <p><b>BLah</b> blah blabh</p>
-        <p><b>blahblahblah</b></p>
+        <div class="intro mobile">
+            <h3>resume</h3>
+        </div>
+        <div class="spacing">
+            <a href="https://github.com/jorycw">pdf</a>
+        </div>
     </div>
 
     <div class="about tabcontent" id="projects">
-        <div class="spacing"></div>
-        <span class="blinking">coding in progress</span>
+        <div class="intro mobile">
+            <h3>projects</h3>
+        </div>
+
+        <div class="spacing">
+            <span class="blinking">coding in progress</span><br><br>
+            <span>for now, check me out <a href="https://github.com/jorycw">@github</a></span>
+        </div>
     </div>
 
     <div class="about tabcontent" id="research">
-        <div class="spacing"></div>
-        <span class="blinking">coding in progress</span>
+        <div class="intro mobile">
+            <h3>research</h3>
+        </div>
+        <div class="spacing">
+            <span class="blinking">coding in progress</span>
+        </div>
     </div>
 
 
     <div class="about tabcontent" id="contact-me">
-        <h2>contact me </h2>
+        <div class="intro mobile">
+            <h3>contact me</h3>
+        </div>
+        <div class="spacing">
+            <h2>contact me </h2>
+        </div>
     </div>
 
 </body>

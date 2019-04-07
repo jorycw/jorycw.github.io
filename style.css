@@ -266,3 +266,17 @@ p {
     }
 }
 
+@media (max-width: 1199px) {
+    .intro {
+        display: none;
+    }
+}
+
+@media (max-width: 800px) {
+    .intro {
+        display: block;
+    }
+    .tabbox {
+        display: none;
+    }
+}

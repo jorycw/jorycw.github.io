@@ -266,17 +266,22 @@ p {
     }
 }
 
+/* ONLY TABS, NO NAME */
 @media (max-width: 1199px) {
     .intro {
         display: none;
     }
 }
 
+/* ONLY NAME, NO TABS */
 @media (max-width: 800px) {
     .intro {
         display: block;
     }
     .tabbox {
         display: none;
+    }
+    .intro h3 {
+        font-size: 4vw;
     }
 }

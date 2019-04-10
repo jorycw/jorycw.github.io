@@ -3,11 +3,10 @@
 <head>
     <title>Jory Williams</title>
     <link href="https://fonts.googleapis.com/css?family=Overpass+Mono|Poppins" rel="stylesheet">
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <script src="tabs.js"></script>
-    <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
     <meta charset="utf-8">
     <meta name="Description" content="Jory Williams">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,7 +19,7 @@
         <div class="tabbox">
 
             <button class="tab active" onclick="openTab(event, 'me')">
-                <div class="tab-name">me</div>
+                <div class="tab-name">home</div>
             </button>
             <button class="tab" onclick="window.open('resume.pdf')">
                 <div class="tab-name">resume</div>
@@ -37,15 +36,21 @@
 
         </div>
 
-        <div class="intro">
-            <h3>Jory Williams.&nbsp;&nbsp;<span>Computer Science Student.&nbsp;&nbsp;&nbsp;&nbsp;</span></h3>
+        <div id='small' class="intro">
+            <div class="name" id="nameS">Jory Williams.&nbsp;&nbsp;</div><div class='occ' id="occS">Computer Science Student.&nbsp;&nbsp;&nbsp;&nbsp;</div>
         </div>
     </div>
 
     <div class="about tabcontent" id="me">
-        <div class="spacing">
-            <h2>Me</h2>
-            <p><b>BLah</b> blah blabh</p>
+        <div id='big-outer'>
+
+            <div id='big' class="intro">
+                <div class="name" id="nameB">Jory Williams.&nbsp;&nbsp;</div><div id="spc"></div><div class='occ' id="occB">Computer Science Student.&nbsp;&nbsp;&nbsp;&nbsp;</div>
+            </div>
+
+
+
+
         </div>
     </div>
     <div class="about tabcontent" id="resume">
@@ -63,8 +68,9 @@
         </div>
 
         <div class="spacing">
-            <span class="blinking">coding in progress</span><br><br>
-            <span>for now, check me out <a href="https://github.com/jorycw">@github</a></span>
+            <span>for now, check me out <a href="https://github.com/jorycw">@github</a></span><br><br>
+            <span class="blinking">coding in progress</span>
+
         </div>
     </div>
 
@@ -83,7 +89,7 @@
             <h3>contact me</h3>
         </div>
         <div class="spacing">
-            <h2>contact me </h2>
+            <h2> feel free to email me at <A HREF="mailto:jorycw@cs.washington.edu">jorycw@cs.washington.edu</A></h2>
         </div>
     </div>
 

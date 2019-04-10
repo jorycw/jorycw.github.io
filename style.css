@@ -1,3 +1,9 @@
+/*
+get out of here >:(
+had very little time to write this
+not enough to not hardcode certain things :(
+ */
+
 body {
     background: #22222A;
     color: #BDBDD3;
@@ -43,12 +49,13 @@ p {
     float: right;
 }
 
-.intro h3 {
+.name, .occ {
     line-height: 70px;
     margin: 0;
+    display:inline;
 }
 
-.intro span {
+.occ {
     font-weight: 100;
     color: #626275;
 }
@@ -58,9 +65,6 @@ p {
     padding-top: 40px; /* was alll
 
     /*margin-left: 80px;
-
-    asdasdasdas
-
 
      */
 }
@@ -305,4 +309,50 @@ a {
     .spacing {
         margin: 5.5em 0 .5em 6.5vw;
     }
+}
+
+.email:before {
+    content: "joryc";
+}
+
+.email:after {
+    content: "w@cs.washington.edu";
+}
+
+
+
+#nameB, #occB {
+    display: block;
+}
+
+
+
+#nameB {
+    font-size: 140pt;
+}
+
+#occB {
+    font-size: 50pt;
+    text-align: right;
+}
+
+#big-outer {
+    height: 90vh;
+    /*top: 0;*/
+    /*bottom: 0;*/
+    display: flex;
+    /*height: 100%;*/
+    /*width: 100%;*/
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#big {
+    position: static;
+    font-family: 'Poppins', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+    z-index: 1;
+}
+#spc {
+    height: 90%;
 }

@@ -443,17 +443,21 @@ a {
         display: block;
         margin: 0;
     }
-    .mobileSpc {    display:
+    .mobileSpc {    display: block;
+        height: 2em;
     }
     .tabcontent, h2, .name, .occ {
         padding: 0;
         margin: 0;
     }
-    .name, .occ {
+    .name, .occ{
         float: none;
-         display: block;
-        text-align: right;
+         display: inline-block;
      }
+    .intro {
+        float: none;
+        display: block;
+    }
 }
 
 

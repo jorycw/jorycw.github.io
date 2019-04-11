@@ -273,11 +273,21 @@ a {
     .tab-name {
         left: -18px;
     }
-    .menu {
+    .menu  {
         height: 61px;
+    }
+    .name, .occ {
+        line-height: 61px;
     }
     .intro h3 {
         line-height: 61px;
+    }
+    #nameB {
+        font-size: 123pt;
+    }
+
+    #occB {
+        font-size: 44pt;
     }
 }
 /*1440p*/
@@ -306,8 +316,17 @@ a {
     .menu {
         height: 53px;
     }
+    .name, .occ {
+        line-height: 53px;
+    }
     .intro h3 {
         line-height: 53px;
+    }
+    #nameB {
+        font-size: 105pt;
+    }
+    #occB {
+        font-size: 38pt;
     }
 }
 /*1280p*/
@@ -336,8 +355,17 @@ a {
     .menu {
         height: 47px;
     }
+    .name, .occ {
+        line-height: 47px;
+    }
     .intro h3 {
         line-height: 47px;
+    }
+    #nameB {
+        font-size: 98pt;
+    }
+    #occB {
+        font-size: 33pt;
     }
 }
 
@@ -353,6 +381,21 @@ a {
     }
     #data {
         font-size: 2px;
+    }
+    #me-tab {
+        display: none;
+    }
+    #big {
+        display:block;
+    }
+    #nameB {
+        font-size: 58pt;
+    }
+    #occB {
+        font-size: 21pt;
+    }
+    #spc {
+        height: 50%;
     }
 }
 

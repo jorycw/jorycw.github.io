@@ -453,7 +453,7 @@ a {
     }
     .name, .occ{
         float: none;
-         display: inline-block;
+        display: inline-block;
      }
     .intro {
         float: none;

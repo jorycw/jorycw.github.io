@@ -1,20 +1,33 @@
 let small = false;
-
+let curr_moving = false;
 function openTab(evt, tab) {
-    if (small === false) {
-        if (tab !=  'me') {
-            big2Small(evt, tab);
-            small = true;
+
+    let mode = $("#data").css('font-size');
+    // mode 1 = normal, 2 = only tabs, 3 = only name
+    if (mode === '1px') {
+        if (small === false ) {
+            if (tab !== 'me' && !curr_moving) {
+                curr_moving = true;
+                big2Small(evt, tab);
+                small = true;
+                changeTab(evt, tab);
+            } else if (tab ==='me') {
+                changeTab(evt, tab);
+            }
         } else {
-            changeTab(evt, tab);
+            if (tab === 'me' && !curr_moving) {
+                changeTab(evt, tab);
+                curr_moving = true;
+                small2Big(evt, tab);
+                small = false;
+            } else if (tab !=='me') {
+                changeTab(evt, tab);
+            }
+
+
         }
-    } else {
-        if (tab == 'me') {
-            small2Big(evt, tab);
-            small = false;
-        } else {
-            changeTab(evt, tab);
-        }
+    } else if (mode == '2px') {
+        changeTab(evt, tab);
     }
 }
 
@@ -40,24 +53,31 @@ function changeTab(evt, tab) {
 }
 
 function big2Small(a, b) {
-    copy('nameB', 'nameCopy', "", "");
-    copy('occB', 'occCopy', a, b);
-    document.getElementById('me').style.display = 'none';
-    moveName('occCopy', 'occS', "", "");
-    moveName('nameCopy', 'nameS', a, b);
-    //document.getElementById('occCopy').parentNode.removeChild(document.getElementById('occCopy'));
-    //document.getElementById('nameCopy').parentNode.removeChild(document.getElementById('nameCopy'));
+    copy('nameB', 'nameCopy', true);
+    copy('occB', 'occCopy', true);
+
+    document.getElementById('nameB').style.visibility = 'hidden';
+    document.getElementById('occB').style.visibility = 'hidden';
+
+    document.getElementById('small').style.display = 'block';
+    document.getElementById('nameS').style.visibility = 'hidden';
+    document.getElementById('occS').style.visibility = 'hidden';
+
+    moveName('occCopy', 'occS');
+    moveName('nameCopy', 'nameS');
 }
 
-function small2Big(a, b) {
-    copy('nameS', 'nameCopy', "", "");
-    copy('occS', 'occCopy', a, b);
+function small2Big() {
+    copy('nameS', 'nameCopy', false);
+    copy('occS', 'occCopy', false);
 
-    moveName('occCopy', 'occB', "", "");
-    moveName('nameCopy', 'nameB', a, b);
+    document.getElementById('small').style.display = 'none';
+
+    moveName('occCopy', 'occB');
+    moveName('nameCopy', 'nameB');
 }
 
-function moveName(from, to, a, b) {
+function moveName(from, to) {
     let end = document.getElementById(to);
     let style = {};
 
@@ -69,15 +89,14 @@ function moveName(from, to, a, b) {
     $('#' + from).animate(style, {
                         duration: 1000,
                         complete: function() {
+                            document.getElementById(to).style.visibility = 'visible';
                             document.getElementById(from).parentNode.removeChild(document.getElementById(from));
-                            if (a != "") {
-                                changeTab(a, b);
-                            }
+                            curr_moving = false;
                         }
     });
 }
 
-function copy(id, newId) {
+function copy(id, newId, big) {
     let orig = document.getElementById(id);
     let div = document.createElement('div');
     div.innerHTML = orig.textContent;
@@ -92,6 +111,8 @@ function copy(id, newId) {
     div.style.fontFamily = window.getComputedStyle(orig).fontFamily;
     div.style.color = window.getComputedStyle(orig).color;
     div.id = newId;
-    div.style.lineHeight = window.getComputedStyle(orig).lineHeight;
+    if (big) {
+        div.style.lineHeight = window.getComputedStyle(orig).lineHeight;
+    }
     document.body.appendChild(div);
 }

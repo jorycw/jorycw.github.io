@@ -49,6 +49,10 @@ p {
     float: right;
 }
 
+#small {
+    visibility: hidden;
+}
+
 .name, .occ {
     line-height: 70px;
     margin: 0;
@@ -133,6 +137,7 @@ p {
 .tab:after, .tab:before {
     color: #BDBDD3;
     background: #626275;
+    border-bottom: 1px solid #626275;
     z-index: -1;
 }
 .active.tab {
@@ -142,6 +147,7 @@ p {
 }
 .active.tab:after, .active.tab:before {
     color: #ffffff;
+    border-bottom: 1px solid #22222A;
     background: #22222A;
 
     position: absolute;
@@ -196,6 +202,53 @@ a {
     from, to { border-color: transparent }
     50% { border-color: #ffffff; }
 }
+
+
+
+.email:before {
+    content: "joryc";
+}
+
+.email:after {
+    content: "w@cs.washington.edu";
+}
+
+#nameB, #occB {
+    display: block;
+}
+
+#nameB {
+    font-size: 140pt;
+}
+
+#occB {
+    font-size: 50pt;
+    float: right;
+}
+
+#big-outer {
+    height: 90vh;
+    /*top: 0;*/
+    /*bottom: 0;*/
+    display: flex;
+    /*height: 100%;*/
+    /*width: 100%;*/
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#big {
+    position: static;
+    font-family: 'Poppins', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+    z-index: 1;
+}
+#spc {
+    height: 90%;
+}
+
+
+
 
 /*1680p*/
 @media (max-width: 1680px) {
@@ -288,71 +341,64 @@ a {
     }
 }
 
+#data {
+    display: none;
+    font-size: 1px;
+}
+
 /* ONLY TABS, NO NAME */
 @media (max-width: 1199px) {
     .intro {
         display: none;
     }
+    #data {
+        font-size: 2px;
+    }
 }
 
 /* ONLY NAME, NO TABS */
 @media (max-width: 800px) {
-    .intro, .mobile, .tabcontent{
+    .intro, .mobile, .tabcontent {
         display: block;
     }
+
     .tabbox {
         display: none;
     }
+
     .intro h3 {
         font-size: 4vw;
     }
+
     .spacing {
         margin: 5.5em 0 .5em 6.5vw;
     }
+
+    #data {
+        font-size: 3px;
+    }
+
+    #me, .menu {
+        display: none;
+    }
+
+    #resume, #resume .spacing {
+        padding-top: 0;
+        margin-top: 0;
+    }
+
+    .blinking, .spacing {
+        width:100%;
+        text-align: center;
+        display: block;
+        margin: 0;
+    }
+    .mobileTop {
+
+    }
+    .tabcontent, h2 {
+        padding: 0;
+        margin: 0;
+    }
 }
 
-.email:before {
-    content: "joryc";
-}
-
-.email:after {
-    content: "w@cs.washington.edu";
-}
-
-
-
-#nameB, #occB {
-    display: block;
-}
-
-
-
-#nameB {
-    font-size: 140pt;
-}
-
-#occB {
-    font-size: 50pt;
-    text-align: right;
-}
-
-#big-outer {
-    height: 90vh;
-    /*top: 0;*/
-    /*bottom: 0;*/
-    display: flex;
-    /*height: 100%;*/
-    /*width: 100%;*/
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-#big {
-    position: static;
-    font-family: 'Poppins', 'Roboto', 'Helvetica', 'Arial', sans-serif;
-    z-index: 1;
-}
-#spc {
-    height: 90%;
-}

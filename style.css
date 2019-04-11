@@ -135,9 +135,10 @@ p {
     z-index: 0;
 }
 .tab:after, .tab:before {
+    pointer-events: all;
     color: #BDBDD3;
     background: #626275;
-    border-bottom: 1px solid #626275;
+    /*border-bottom: 1px solid #626275;*/
     z-index: -1;
 }
 .active.tab {
@@ -147,7 +148,7 @@ p {
 }
 .active.tab:after, .active.tab:before {
     color: #ffffff;
-    border-bottom: 1px solid #22222A;
+    /*border-bottom: 1px solid #22222A;*/
     background: #22222A;
 
     position: absolute;
@@ -250,6 +251,10 @@ a {
 
 .mobileSpc {
     display: none;
+}
+
+.width {
+    margin-left: 5%;
 }
 
 /*1680p*/
@@ -450,4 +455,5 @@ a {
         text-align: right;
      }
 }
+
 

@@ -320,6 +320,7 @@ a {
     }
     .tab-name {
         left: -16px;
+        white-space: nowrap;
     }
     .menu {
         height: 53px;

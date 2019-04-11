@@ -255,6 +255,7 @@ a {
 
 .width {
     margin-left: 5%;
+    margin-right: 5%;
 }
 
 /*1680p*/
@@ -460,4 +461,11 @@ a {
     }
 }
 
+#phone:before {
+    content: '(509)';
+}
+
+#phone:after {
+    content: '7231';
+}
 
